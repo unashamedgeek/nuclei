@@ -459,7 +459,7 @@ func init() {
 			Value: "HTTP response headers in name:value format",
 		},
 	}
-	HTTPRequestDoc.Fields = make([]encoder.Doc, 36)
+	HTTPRequestDoc.Fields = make([]encoder.Doc, 37)
 	HTTPRequestDoc.Fields[0].Name = "path"
 	HTTPRequestDoc.Fields[0].Type = "[]string"
 	HTTPRequestDoc.Fields[0].Note = ""
@@ -668,6 +668,11 @@ func init() {
 	HTTPRequestDoc.Fields[35].Note = ""
 	HTTPRequestDoc.Fields[35].Description = "FuzzPreConditionOperator is the operator between multiple PreConditions for fuzzing Default is OR"
 	HTTPRequestDoc.Fields[35].Comments[encoder.LineComment] = "FuzzPreConditionOperator is the operator between multiple PreConditions for fuzzing Default is OR"
+	HTTPRequestDoc.Fields[36].Name = "global-matchers"
+	HTTPRequestDoc.Fields[36].Type = "bool"
+	HTTPRequestDoc.Fields[36].Note = ""
+	HTTPRequestDoc.Fields[36].Description = "GlobalMatchers marks matchers as static and applies globally to all result events from other templates"
+	HTTPRequestDoc.Fields[36].Comments[encoder.LineComment] = "GlobalMatchers marks matchers as static and applies globally to all result events from other templates"
 
 	GENERATORSAttackTypeHolderDoc.Type = "generators.AttackTypeHolder"
 	GENERATORSAttackTypeHolderDoc.Comments[encoder.LineComment] = " AttackTypeHolder is used to hold internal type of the protocol"
@@ -1329,7 +1334,7 @@ func init() {
 			Value: "Full Network protocol data",
 		},
 	}
-	NETWORKRequestDoc.Fields = make([]encoder.Doc, 10)
+	NETWORKRequestDoc.Fields = make([]encoder.Doc, 11)
 	NETWORKRequestDoc.Fields[0].Name = "id"
 	NETWORKRequestDoc.Fields[0].Type = "string"
 	NETWORKRequestDoc.Fields[0].Note = ""
@@ -1388,6 +1393,11 @@ func init() {
 	NETWORKRequestDoc.Fields[9].Comments[encoder.LineComment] = "ReadAll determines if the data stream should be read till the end regardless of the size"
 
 	NETWORKRequestDoc.Fields[9].AddExample("", false)
+	NETWORKRequestDoc.Fields[10].Name = "stop-at-first-match"
+	NETWORKRequestDoc.Fields[10].Type = "bool"
+	NETWORKRequestDoc.Fields[10].Note = ""
+	NETWORKRequestDoc.Fields[10].Description = "StopAtFirstMatch stops the execution of the requests and template as soon as a match is found."
+	NETWORKRequestDoc.Fields[10].Comments[encoder.LineComment] = "StopAtFirstMatch stops the execution of the requests and template as soon as a match is found."
 
 	NETWORKInputDoc.Type = "network.Input"
 	NETWORKInputDoc.Comments[encoder.LineComment] = ""

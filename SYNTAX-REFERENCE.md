@@ -1651,6 +1651,19 @@ FuzzPreConditionOperator is the operator between multiple PreConditions for fuzz
 
 <hr />
 
+<div class="dd">
+
+<code>global-matchers</code>  <i>bool</i>
+
+</div>
+<div class="dt">
+
+GlobalMatchers marks matchers as static and applies globally to all result events from other templates
+
+</div>
+
+<hr />
+
 
 
 
@@ -3205,6 +3218,19 @@ Examples:
 read-all: false
 ```
 
+
+</div>
+
+<hr />
+
+<div class="dd">
+
+<code>stop-at-first-match</code>  <i>bool</i>
+
+</div>
+<div class="dt">
+
+StopAtFirstMatch stops the execution of the requests and template as soon as a match is found.
 
 </div>
 
